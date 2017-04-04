@@ -22,6 +22,7 @@ function crearFlies() {
     contador=0;
     lugarCaracteres.innerText=contador;
     lugarCaracteres.style.color="#000000";
+    event.stopPropagation();
     
 
 }
@@ -38,12 +39,14 @@ function contadorCaracteres() {
     } if (textarea.textLength<cercaAlMaximo){
         lugar.style.color="#000000"
     }
+    event.stopPropagation();
 }
 
 
 document.addEventListener("click",contador);
-
-
+document.getElementById("creando").addEventListener("click",crearFlies);
+document.getElementById("flies").addEventListener("click",contadorCaracteres);
+document.getElementById("autor").addEventListener("click",contadorCaracteres);
 function contador() {
     var lugar = document.getElementById("contadorClicks");
     lugar.innerText = " "+contadorClick;    
