@@ -35,7 +35,9 @@ function contadorCaracteres() {
 
         if (textarea.textLength>=cercaAlMaximo){
         lugar.style.color="#DC143C";       
-    } 
+    } if (textarea.textLength<cercaAlMaximo){
+        lugar.style.color="#000000"
+    }
 }
 
 
